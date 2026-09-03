@@ -1,12 +1,12 @@
 import { navItems } from '../../data/siteContent.js';
-import logo from '../../assets/logo.jpg';
 import { InstagramIcon, WhatsAppIcon } from '../shared/Icons.jsx';
+import BrandLogo from '../shared/BrandLogo.jsx';
 
 export default function Footer() {
   return (
     <footer>
       <div className="wrap footer-top">
-        <div className="footer-brand"><img src={logo} alt="Logo GH Estilista" width="240" height="240" />GH <em>Estilista</em></div>
+        <div className="footer-brand"><BrandLogo className="footer-logo" variant="dark" /></div>
         <nav className="footer-nav">
           {navItems.filter((item) => item.href !== '#por-que').map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}
         </nav>

@@ -51,8 +51,7 @@
 
 @media (max-width: 560px){
   .wrap{padding-left:20px; padding-right:20px;}
-  .brand{font-size:19px; gap:8px;}
-  .brand img{width:38px; height:38px;}
+  .brand-logo{width:61px;}
   .header-social{display:none;}
   .nav-links{padding-left:24px; padding-right:24px;}
   .hero .wrap{padding-top:104px;}

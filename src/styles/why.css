@@ -56,6 +56,10 @@
   from{opacity:0; transform:translateX(48px);}
   to{opacity:1; transform:translateX(0);}
 }
+@keyframes why-media-enter{
+  from{opacity:0; transform:translateX(72px);}
+  to{opacity:1; transform:translateX(0);}
+}
 .why-primary-grid{
   position:relative;
   z-index:2;
@@ -170,6 +174,7 @@
   .why-media{
     top:-120px;
     bottom:0;
+    animation:why-media-enter .85s cubic-bezier(.22,.61,.36,1) .08s both;
   }
   .why-model{
     top:0;
@@ -178,10 +183,14 @@
     width:auto;
     max-width:none;
     height:100%;
+    animation:none;
+    opacity:1;
+    transform:none;
   }
 }
 
 @media (prefers-reduced-motion: reduce){
+  .why-media{animation:none; transform:none; opacity:1;}
   .why-model{animation:none; transform:none; opacity:1;}
   .why-item{transition:none;}
 }

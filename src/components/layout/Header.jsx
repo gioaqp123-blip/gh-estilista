@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { navItems } from '../../data/siteContent.js';
-import logo from '../../assets/logo.jpg';
 import { InstagramIcon, WhatsAppIcon } from '../shared/Icons.jsx';
+import BrandLogo from '../shared/BrandLogo.jsx';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -59,7 +59,7 @@ export default function Header() {
   return (
     <header className={scrolled ? 'is-scrolled' : ''}>
       <div className="wrap">
-        <div className="brand"><img src={logo} alt="Logo GH Estilista" width="240" height="240" />GH <span>Estilista</span></div>
+        <div className="brand"><BrandLogo className="brand-logo" variant="light" /></div>
         <div className={`nav-links${menuOpen ? ' open' : ''}`} id="navLinks">
           <nav>
             <ul>

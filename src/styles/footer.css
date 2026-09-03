@@ -14,18 +14,13 @@
   .footer-brand{
     display:flex;
     align-items:center;
-    gap:12px;
-    font-family:'Fraunces', serif;
-    font-size:19px;
-    font-weight:600;
-    color:var(--paper);
+    flex-shrink:0;
   }
-  .footer-brand img{
-    width:34px; height:34px;
-    border-radius:50%;
-    object-fit:cover;
+  .footer-logo{
+    display:block;
+    width:68px;
+    height:auto;
   }
-  .footer-brand em{color:var(--rose); font-style:normal;}
   .footer-nav{
     display:flex;
     flex-wrap:wrap;
@@ -65,4 +60,3 @@
     color:rgba(244,236,230,0.4);
     font-size:12px;
   }
-

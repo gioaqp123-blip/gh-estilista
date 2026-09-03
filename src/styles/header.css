@@ -12,21 +12,14 @@
   .brand{
     display:flex;
     align-items:center;
-    gap:11px;
-    font-family:'Fraunces', serif;
-    font-size:22px;
-    font-weight:600;
-    color:var(--plum);
-  }
-  .brand img{
-    width:44px;
-    height:44px;
-    border-radius:5px;
-    object-fit:cover;
     flex-shrink:0;
-    border:1px solid rgba(92,29,62,0.12);
   }
-  .brand span{color:var(--rose);}
+  .brand-logo{
+    display:block;
+    width:68px;
+    height:auto;
+    flex-shrink:0;
+  }
   nav ul{list-style:none; display:flex; gap:30px;}
   nav a{
     font-size:13px;
