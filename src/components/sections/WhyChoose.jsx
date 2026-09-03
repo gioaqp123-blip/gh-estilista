@@ -23,27 +23,29 @@ export default function WhyChoose() {
   return (
     <section className="section why" id="por-que">
       <div className="wrap">
-        <div className="section-head">
-          <div className="eyebrow light-eyebrow">¿Por qué GH Estilista?</div>
-          <h2>Un espacio pensado para ti.</h2>
-        </div>
-        <div className="why-editorial">
-          <figure className="why-media" aria-hidden="true">
-            <div className="why-media-backdrop" />
-            <img
-              className="why-model"
-              src={whyModel}
-              alt=""
-              width="1000"
-              height="1250"
-              loading="lazy"
-              decoding="async"
-              sizes="(max-width: 860px) 100vw, 42vw"
-            />
-          </figure>
-          <Reveal className="why-primary-grid stagger">
-            {primaryItems.map((item) => <WhyBlock item={item} key={item.id} />)}
-          </Reveal>
+        <div className="why-upper">
+          <div className="section-head">
+            <div className="eyebrow light-eyebrow">¿Por qué GH Estilista?</div>
+            <h2>Un espacio pensado para ti.</h2>
+          </div>
+          <div className="why-editorial">
+            <figure className="why-media" aria-hidden="true">
+              <div className="why-media-backdrop" />
+              <img
+                className="why-model"
+                src={whyModel}
+                alt=""
+                width="1000"
+                height="1250"
+                loading="lazy"
+                decoding="async"
+                sizes="(max-width: 860px) 100vw, 42vw"
+              />
+            </figure>
+            <Reveal className="why-primary-grid stagger">
+              {primaryItems.map((item) => <WhyBlock item={item} key={item.id} />)}
+            </Reveal>
+          </div>
         </div>
         <Reveal className="why-secondary">
           {secondaryItems.map((item) => (
