@@ -1,23 +1,68 @@
 /* ---------- WHY ---------- */
-.why{background:var(--cream);}
-.why .section-head{max-width:660px;}
-.why-grid{
+.why{
+  background:var(--cream);
+  overflow:hidden;
+}
+.why .wrap{position:relative;}
+.why .section-head{max-width:760px;}
+.why-editorial{
+  position:relative;
+  isolation:isolate;
+  margin-top:8px;
+}
+.why-media{
+  position:absolute;
+  z-index:0;
+  top:0;
+  right:0;
+  bottom:0;
+  width:43%;
+  margin:0;
+  pointer-events:none;
+}
+.why-media-frame{
+  position:relative;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:var(--plum-deep);
+  clip-path:polygon(13% 0, 100% 0, 92% 100%, 5% 100%);
+}
+.why-media-frame::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(61,19,41,.08), rgba(61,19,41,.3));
+}
+.why-media img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:58% 38%;
+  filter:saturate(1.06);
+}
+.why-primary-grid{
+  position:relative;
+  z-index:2;
   display:grid;
-  grid-template-columns:repeat(3, minmax(0, 1fr));
+  grid-template-columns:1.05fr 1.05fr .9fr;
   gap:16px;
+  align-items:stretch;
 }
 .why-item{
   min-height:250px;
   padding:30px 28px;
+  background:rgba(253,246,245,.96);
   border-top:1px solid rgba(92,29,62,.3);
-  border-bottom:1px solid rgba(92,29,62,.12);
+  border-bottom:1px solid rgba(92,29,62,.14);
   transition:transform .3s ease, background .3s ease, box-shadow .3s ease;
 }
-.why-item:hover{transform:translateY(-4px); box-shadow:0 18px 32px rgba(61,19,41,.08);}
 .why-item-featured{
   background:var(--rose);
   border-color:var(--rose);
   color:var(--paper);
+  clip-path:polygon(0 0, 100% 0, 100% 83%, 87% 100%, 0 100%);
 }
 .why-item-topline{
   display:flex;
@@ -56,6 +101,8 @@
 }
 .why-item-featured p{color:rgba(253,246,245,.84);}
 .why-secondary{
+  position:relative;
+  z-index:2;
   display:grid;
   grid-template-columns:repeat(2, minmax(0, 1fr));
   gap:16px;
@@ -77,8 +124,75 @@
 }
 .why-secondary-item h3{color:var(--plum); font:500 16px/1.25 'Fraunces', serif;}
 .why-secondary-item p{margin-top:5px; color:#6d5860; font-size:13px; line-height:1.4;}
-@media (max-width: 860px){
-  .why-grid{grid-template-columns:1fr;}
-  .why-item{min-height:0;}
-  .why-secondary{grid-template-columns:1fr;}
+
+@media (hover:hover) and (min-width:861px){
+  .why-item:hover{transform:translateY(-4px); box-shadow:0 18px 32px rgba(61,19,41,.1);}
+}
+
+@media (min-width:861px) and (max-width:1100px){
+  .why-primary-grid{gap:12px; grid-template-columns:1.05fr 1.05fr .9fr;}
+  .why-item{min-height:238px; padding:24px 20px;}
+  .why-item-topline{margin-bottom:34px;}
+  .why-item h3{font-size:18px;}
+  .why-item p{font-size:13px;}
+  .why-media{top:-48px; bottom:0; width:42%;}
+}
+
+@media (min-width:1101px){
+  .why-media{top:-64px; bottom:0;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .why-item{transition:none;}
+}
+
+@media (max-width:860px){
+  .why{overflow:hidden;}
+  .why .section-head{max-width:none;}
+  .why-editorial{margin-top:2px;}
+  .why-media{
+    top:0;
+    right:-20px;
+    bottom:0;
+    width:88%;
+    opacity:.96;
+  }
+  .why-media-frame{
+    clip-path:polygon(31% 0, 100% 0, 100% 88%, 76% 100%, 0 100%);
+  }
+  .why-media-frame::after{
+    background:linear-gradient(180deg, rgba(61,19,41,.78) 0%, rgba(61,19,41,.5) 44%, rgba(61,19,41,.18) 100%);
+  }
+  .why-media img{
+    object-position:68% 36%;
+    filter:saturate(1.06) brightness(.76);
+  }
+  .why-primary-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+    padding:0;
+  }
+  .why-item{
+    min-height:0;
+    padding:24px 20px;
+    background:rgba(253,246,245,.94);
+  }
+  .why-item:nth-child(1),
+  .why-item:nth-child(2){max-width:calc(100% - 24px);}
+  .why-item:nth-child(2){margin-left:24px;}
+  .why-item-featured{
+    max-width:calc(100% - 10px);
+    margin-top:4px;
+    margin-left:0;
+    background:var(--rose);
+  }
+  .why-item-topline{margin-bottom:28px;}
+  .why-item h3{font-size:19px;}
+  .why-secondary{
+    grid-template-columns:1fr;
+    gap:0;
+    margin-top:16px;
+    padding-top:18px;
+  }
+  .why-secondary-item{padding:12px 0;}
 }

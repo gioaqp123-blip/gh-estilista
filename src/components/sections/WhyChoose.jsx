@@ -1,23 +1,13 @@
 import Reveal from '../shared/Reveal.jsx';
 import { WhyIcon } from '../shared/Icons.jsx';
 import { whyItems } from '../../data/siteContent.js';
+import whyFashion from '../../assets/why-fashion.jpg';
 
-const primaryTitles = [
-  'Experiencia y especialización',
-  'Belleza + bienestar',
-  'Atención personalizada',
-];
-
-const secondaryTitles = [
-  'Atención unisex',
-  'Un espacio pensado para ti',
-];
-
-function WhyBlock({ item, featured = false }) {
+function WhyBlock({ item }) {
   return (
-    <article className={`why-item${featured ? ' why-item-featured' : ''}`}>
+    <article className={`why-item${item.featured ? ' why-item-featured' : ''}`}>
       <div className="why-item-topline">
-        <span className="why-index">{featured ? '03' : item.title.startsWith('Experiencia') ? '01' : '02'}</span>
+        <span className="why-index">{item.number}</span>
         <div className="why-icon" aria-hidden="true"><WhyIcon type={item.icon} /></div>
       </div>
       <h3>{item.title}</h3>
@@ -27,8 +17,8 @@ function WhyBlock({ item, featured = false }) {
 }
 
 export default function WhyChoose() {
-  const primaryItems = primaryTitles.map((title) => whyItems.find((item) => item.title === title)).filter(Boolean);
-  const secondaryItems = secondaryTitles.map((title) => whyItems.find((item) => item.title === title)).filter(Boolean);
+  const primaryItems = whyItems.filter((item) => item.group === 'primary');
+  const secondaryItems = whyItems.filter((item) => item.group === 'secondary');
 
   return (
     <section className="section why" id="por-que">
@@ -37,12 +27,27 @@ export default function WhyChoose() {
           <div className="eyebrow light-eyebrow">¿Por qué GH Estilista?</div>
           <h2>Un espacio pensado para ti.</h2>
         </div>
-        <Reveal className="why-grid stagger">
-          {primaryItems.map((item, index) => <WhyBlock item={item} featured={index === 2} key={item.title} />)}
-        </Reveal>
+        <div className="why-editorial">
+          <figure className="why-media" aria-hidden="true">
+            <div className="why-media-frame">
+              <img
+                src={whyFashion}
+                alt=""
+                width="1000"
+                height="1250"
+                loading="lazy"
+                decoding="async"
+                sizes="(max-width: 860px) 100vw, 42vw"
+              />
+            </div>
+          </figure>
+          <Reveal className="why-primary-grid stagger">
+            {primaryItems.map((item) => <WhyBlock item={item} key={item.id} />)}
+          </Reveal>
+        </div>
         <Reveal className="why-secondary">
           {secondaryItems.map((item) => (
-            <div className="why-secondary-item" key={item.title}>
+            <div className="why-secondary-item" key={item.id}>
               <WhyIcon type={item.icon} />
               <div><h3>{item.title}</h3><p>{item.description}</p></div>
             </div>

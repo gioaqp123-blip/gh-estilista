@@ -22,9 +22,45 @@ export const testimonials = [
 ];
 
 export const whyItems = [
-  { title: 'Atención personalizada', description: 'Cada persona tiene necesidades diferentes.', icon: 'heart' },
-  { title: 'Experiencia y especialización', description: 'Estilista y colorista certificada, con trayectoria desde 2013.', icon: 'badge' },
-  { title: 'Belleza + bienestar', description: 'No solo cabello: también piel, pestañas y experiencias de relajación.', icon: 'spark' },
-  { title: 'Atención unisex', description: 'Servicios pensados para mujeres y hombres.', icon: 'rings' },
-  { title: 'Un espacio pensado para ti', description: 'Cada visita es también un momento de autocuidado.', icon: 'pin' },
+  {
+    id: 'experience',
+    group: 'primary',
+    number: '01',
+    title: 'Experiencia y especialización',
+    description: 'Estilista y colorista certificada, con trayectoria desde 2013.',
+    icon: 'badge',
+    featured: false,
+  },
+  {
+    id: 'wellness',
+    group: 'primary',
+    number: '02',
+    title: 'Belleza + bienestar',
+    description: 'No solo cabello: también piel, pestañas y experiencias de relajación.',
+    icon: 'spark',
+    featured: false,
+  },
+  {
+    id: 'personalized',
+    group: 'primary',
+    number: '03',
+    title: 'Atención personalizada',
+    description: 'Cada persona tiene necesidades diferentes.',
+    icon: 'heart',
+    featured: true,
+  },
+  {
+    id: 'unisex',
+    group: 'secondary',
+    title: 'Atención unisex',
+    description: 'Servicios pensados para mujeres y hombres.',
+    icon: 'rings',
+  },
+  {
+    id: 'space',
+    group: 'secondary',
+    title: 'Un espacio pensado para ti',
+    description: 'Cada visita es también un momento de autocuidado.',
+    icon: 'pin',
+  },
 ];
