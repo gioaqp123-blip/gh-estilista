@@ -14,9 +14,9 @@ export default function Hero() {
               <a className="btn-ghost" href="#servicios">Ver servicios</a>
             </div>
           </div>
-          <div className="hero-visual" aria-label="Modelo editorial con cabello cobrizo">
+          <div className="hero-visual" aria-label="Modelo editorial con cabello castaño y reflejos cobrizos">
             <div className="hero-visual-frame">
-              <img src={heroModel} alt="Modelo con cabello castaño iluminado y rizado" width="1100" height="1039" loading="eager" fetchPriority="high" decoding="async" />
+              <img src={heroModel} alt="Modelo con cabello castaño, ondas voluminosas y reflejos cobrizos" width="896" height="1120" loading="eager" fetchPriority="high" decoding="async" />
             </div>
           </div>
         </div>

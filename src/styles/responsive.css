@@ -36,10 +36,6 @@
   .header-actions{position:relative; z-index:70;}
   .burger{display:flex; flex-direction:column; gap:5px; z-index:70; background:none; border:none; cursor:pointer; padding:8px 0 8px 8px;}
   .burger span{width:24px; height:1.5px; background:var(--plum); transition:transform .25s ease, opacity .25s ease;}
-  .hero .wrap{padding-top:120px; padding-bottom:48px;}
-  .hero-layout{grid-template-columns:1fr; gap:18px; min-height:0;}
-  .hero-copy{max-width:650px;}
-  .hero-scroll{display:none;}
   .services-heading-row{grid-template-columns:1fr; gap:18px;}
   .services-heading-row p{max-width:520px;}
   .services-grid{grid-template-columns:1fr; gap:20px;}
