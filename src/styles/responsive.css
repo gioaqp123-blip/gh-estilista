@@ -1,0 +1,21 @@
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 860px){
+    header{backdrop-filter:none; background:var(--paper);}
+    .nav-links{position:fixed; inset:0 0 0 auto; width:78%; background:var(--paper); flex-direction:column; align-items:flex-start; padding:100px 32px; gap:24px; transform:translateX(100%); transition:transform .35s ease; overflow-y:auto; z-index:65;}
+    .nav-links.open{transform:translateX(0);}
+    nav ul{flex-direction:column; gap:20px;}
+    .burger{display:flex; flex-direction:column; gap:5px; z-index:70; background:none; border:none; cursor:pointer;}
+    .burger span{width:24px; height:1.5px; background:var(--plum);}
+    .hero .wrap{padding-top:120px; padding-bottom:40px;}
+    .hero-scroll{display:none;}
+    .about .wrap{grid-template-columns:1fr;}
+    .about-frame{aspect-ratio:16/10;}
+    .about-frame .about-photo-accent{width:34%; bottom:-18px; right:-14px; border-width:4px;}
+    .about-frame .tag{width:58%;}
+    .chart{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .testi-grid{grid-template-columns:1fr;}
+    .contact .wrap{grid-template-columns:1fr;}
+    .contact-row .value{text-align:right; font-size:13px;}
+    .section{padding:80px 0;}
+  }

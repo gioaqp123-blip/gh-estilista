@@ -1,0 +1,101 @@
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--cream);}
+  .chart{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:26px;
+  }
+  .chart-cell{
+    background:var(--paper);
+    border:1px solid rgba(92,29,62,0.08);
+    border-radius:8px;
+    padding:38px 36px;
+    position:relative;
+    box-shadow:0 6px 20px rgba(92,29,62,0.05);
+    transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+  }
+  .chart-cell:hover{transform:translateY(-6px); box-shadow:0 26px 46px rgba(92,29,62,0.14); border-color:rgba(92,29,62,0.14); z-index:1;}
+  .chart-cell .dot svg{transition:transform .3s ease;}
+  .chart-cell:hover .dot svg{transform:scale(1.12);}
+  .chart-cell .code{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:13px;
+    color:var(--gold);
+    letter-spacing:0.04em;
+  }
+  .chart-cell h3{
+    margin-top:14px;
+    font-size:23px;
+    color:var(--plum);
+    font-weight:500;
+  }
+  .chart-cell p{
+    margin-top:10px;
+    font-size:14.5px;
+    line-height:1.6;
+    color:#5b4a51;
+    max-width:360px;
+  }
+  .chart-cell .dot{
+    width:52px; height:52px;
+    border-radius:50%;
+    background:var(--dot-bg, rgba(201,161,90,0.12));
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:18px;
+    transition:transform .3s ease;
+  }
+  .chart-cell .dot svg{display:block; width:24px; height:24px;}
+  .service-list{
+    margin-top:16px;
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    max-width:360px;
+  }
+  .service-list li{
+    font-size:14.5px;
+    line-height:1.5;
+    color:#5b4a51;
+    padding-left:16px;
+    position:relative;
+  }
+  .service-list li::before{
+    content:'';
+    position:absolute; left:0; top:9px;
+    width:7px; height:1px;
+    background:var(--gold);
+  }
+  .service-sub{
+    margin-top:22px;
+    padding-top:18px;
+    border-top:1px solid rgba(92,29,62,0.12);
+  }
+  .service-sub:first-of-type{margin-top:14px; padding-top:0; border-top:none;}
+  .service-sub .sub-title{
+    font-size:14px;
+    color:var(--plum);
+    font-weight:500;
+    letter-spacing:0.01em;
+  }
+  .service-sub p{
+    margin-top:6px;
+    font-size:14px;
+    line-height:1.6;
+    color:#5b4a51;
+    max-width:360px;
+  }
+  .service-price{
+    margin-top:8px;
+    font-family:'Fraunces', serif;
+    font-size:14px;
+    color:var(--gold);
+  }
+  .price-note{
+    margin-top:22px;
+    font-size:12.5px;
+    color:#8a7178;
+    font-style:italic;
+  }
+
