@@ -1,5 +1,5 @@
-import heroModel from '../../assets/hero-model.png';
-import heroModelMobile from '../../assets/hero-model-mobile.png';
+import heroModel from '../../assets/hero/hero-model.png';
+import heroModelMobile from '../../assets/hero/hero-model-mobile.png';
 
 export default function Hero() {
   return (

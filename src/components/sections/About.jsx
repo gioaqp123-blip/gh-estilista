@@ -1,7 +1,7 @@
 import Reveal from '../shared/Reveal.jsx';
 import CountUp from '../shared/CountUp.jsx';
-import aboutMain from '../../assets/about-main.jpg';
-import aboutAccent from '../../assets/about-accent.jpg';
+import aboutMain from '../../assets/about/about-main.jpg';
+import aboutAccent from '../../assets/about/about-accent.jpg';
 
 export default function About() {
   return (

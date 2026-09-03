@@ -92,15 +92,22 @@ Los iconos actuales son SVG inline y se centralizan en [`src/components/shared/I
 
 ## Imágenes y assets
 
-Assets de contenido:
+El catálogo completo, con dimensiones y componentes consumidores, está en [`assets/README.md`](assets/README.md).
 
-- [`src/assets/logo.jpg`](../../src/assets/logo.jpg): logo usado por header y footer.
-- [`src/assets/about-main.jpg`](../../src/assets/about-main.jpg): imagen principal de la sección “Sobre mí” y fondo de CTA.
-- [`src/assets/about-accent.jpg`](../../src/assets/about-accent.jpg): imagen secundaria de la composición “Sobre mí”.
-- [`public/og-image.jpg`](../../public/og-image.jpg): imagen social para Open Graph.
-- `public/favicon.jpg` y `public/apple-touch-icon.jpg`: iconos del documento.
+Assets activos de contenido:
+
+- [`src/assets/about/about-main.jpg`](../../src/assets/about/about-main.jpg): imagen principal de “Sobre mí” y fondo del CTA.
+- [`src/assets/about/about-accent.jpg`](../../src/assets/about/about-accent.jpg): imagen secundaria de “Sobre mí”.
+- [`src/assets/hero/hero-model.png`](../../src/assets/hero/hero-model.png): modelo del Hero de escritorio.
+- [`src/assets/hero/hero-model-mobile.png`](../../src/assets/hero/hero-model-mobile.png): variante móvil del Hero.
+- [`src/assets/services/`](../../src/assets/services/): cuatro imágenes de categorías de servicios.
+- [`src/assets/why/why-model.png`](../../src/assets/why/why-model.png): modelo decorativa de “Por qué GH”.
+
+El logo activo para navbar y footer es el trazado vectorial de [`BrandLogo.jsx`](../../src/components/shared/BrandLogo.jsx). El favicon principal es [`public/favicon.svg`](../../public/favicon.svg); se conservan `favicon.jpg` y `apple-touch-icon.jpg` por compatibilidad.
 
 Las imágenes deben conservar `alt`, dimensiones explícitas y `loading="lazy"` cuando no formen parte del primer viewport. El build genera copias optimizadas con hash en `deploy/assets/`.
+
+Los archivos fuente históricos están en [`assets/source-material/`](assets/source-material/); no deben importarse desde React ni copiarse al flujo de producción.
 
 ## Responsive y accesibilidad
 

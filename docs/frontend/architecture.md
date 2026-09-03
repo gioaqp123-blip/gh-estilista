@@ -58,7 +58,7 @@ En [`src/components/shared`](../../src/components/shared):
 - [`src/data/siteContent.js`](../../src/data/siteContent.js) contiene navegación, testimonios y razones para elegir el salón.
 - El contenido repetido no debe copiarse directamente entre componentes si puede vivir en estos módulos.
 
-Los servicios incluyen los campos funcionales `id`, `name`, `category`, `duration`, `price`, `priceLabel`, `description` e `items`, además de etiquetas auxiliares para selector, información y presentación.
+Los servicios incluyen los campos funcionales `id`, `name`, `category`, `duration`, `description`, `items`, `bookingLabel`, `infoLabel` e `infoDetail`, además de `cardTitle` e `image` cuando la presentación lo necesita. La duración es la única propiedad numérica usada para calcular horarios; el precio comercial se conserva dentro de las etiquetas visibles actuales.
 
 ## Estilos
 
@@ -72,16 +72,29 @@ Los estilos se importan desde [`src/main.jsx`](../../src/main.jsx). Las clases e
 
 ## Assets y publicación
 
-- `src/assets/`: imágenes importadas por React y procesadas por Vite.
-- `public/`: archivos que deben conservar su nombre público, como favicon, Open Graph, sitemap y robots.
-- `deploy/`: salida generada por `npm run build`; se publica como raíz del sitio.
+La fuente canónica de imágenes de runtime está organizada por sección:
 
-No editar manualmente los archivos hash dentro de `deploy/assets/`; se regeneran con el build.
+```text
+src/assets/
+├── about/
+├── hero/
+├── services/
+└── why/
+```
+
+Los componentes importan directamente desde esas carpetas. El logo del navbar y footer no es una imagen raster: es el trazado SVG inline de `src/components/shared/BrandLogo.jsx`, con variantes de color para cada fondo.
+
+`public/` conserva archivos con URL pública estable: `favicon.svg`, `favicon.jpg`, `apple-touch-icon.jpg`, `og-image.jpg`, `robots.txt` y `sitemap.xml`.
+
+`docs/frontend/assets/source-material/` contiene originales históricos que no se cargan en runtime. `docs/frontend/frontend-update/mockups/` contiene referencias visuales que tampoco se importan desde React.
+
+`deploy/` es la salida generada por `npm run build` y se publica como raíz del sitio. `vite.config.js` usa `emptyOutDir: true`, por lo que los hashes antiguos se eliminan al regenerar. No editar manualmente `deploy/assets/`.
 
 ## Comandos
 
 ```bash
 npm run dev
+npm test
 npm run build
 npm run preview
 ```

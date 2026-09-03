@@ -1,7 +1,7 @@
 import Reveal from '../shared/Reveal.jsx';
 import { WhyIcon } from '../shared/Icons.jsx';
 import { whyItems } from '../../data/siteContent.js';
-import whyModel from '../../assets/why-model.png';
+import whyModel from '../../assets/why/why-model.png';
 
 function WhyBlock({ item }) {
   return (

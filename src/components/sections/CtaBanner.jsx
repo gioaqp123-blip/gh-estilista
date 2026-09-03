@@ -1,5 +1,5 @@
 import Reveal from '../shared/Reveal.jsx';
-import aboutMain from '../../assets/about-main.jpg';
+import aboutMain from '../../assets/about/about-main.jpg';
 
 export default function CtaBanner() {
   return (

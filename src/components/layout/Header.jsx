@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { navItems } from '../../data/siteContent.js';
-import { InstagramIcon, WhatsAppIcon } from '../shared/Icons.jsx';
+import { InstagramIcon } from '../shared/Icons.jsx';
 import BrandLogo from '../shared/BrandLogo.jsx';
 
 export default function Header() {
