@@ -1,7 +1,7 @@
 import Reveal from '../shared/Reveal.jsx';
 import { WhyIcon } from '../shared/Icons.jsx';
 import { whyItems } from '../../data/siteContent.js';
-import whyFashion from '../../assets/why-fashion.jpg';
+import whyModel from '../../assets/why-model.png';
 
 function WhyBlock({ item }) {
   return (
@@ -29,17 +29,17 @@ export default function WhyChoose() {
         </div>
         <div className="why-editorial">
           <figure className="why-media" aria-hidden="true">
-            <div className="why-media-frame">
-              <img
-                src={whyFashion}
-                alt=""
-                width="1000"
-                height="1250"
-                loading="lazy"
-                decoding="async"
-                sizes="(max-width: 860px) 100vw, 42vw"
-              />
-            </div>
+            <div className="why-media-backdrop" />
+            <img
+              className="why-model"
+              src={whyModel}
+              alt=""
+              width="1000"
+              height="1250"
+              loading="lazy"
+              decoding="async"
+              sizes="(max-width: 860px) 100vw, 42vw"
+            />
           </figure>
           <Reveal className="why-primary-grid stagger">
             {primaryItems.map((item) => <WhyBlock item={item} key={item.id} />)}
