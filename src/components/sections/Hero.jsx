@@ -1,4 +1,5 @@
 import heroModel from '../../assets/hero-model.png';
+import heroModelMobile from '../../assets/hero-model-mobile.png';
 
 export default function Hero() {
   return (
@@ -16,7 +17,10 @@ export default function Hero() {
           </div>
           <div className="hero-visual" aria-label="Modelo editorial con cabello castaño y reflejos cobrizos">
             <div className="hero-visual-frame">
-              <img src={heroModel} alt="Modelo con cabello castaño, ondas voluminosas y reflejos cobrizos" width="896" height="1120" loading="eager" fetchPriority="high" decoding="async" />
+              <picture className="hero-visual-picture">
+                <source media="(max-width: 860px)" srcSet={heroModelMobile} />
+                <img src={heroModel} alt="Modelo con cabello castaño, ondas voluminosas y reflejos cobrizos" width="896" height="1120" loading="eager" fetchPriority="high" decoding="async" sizes="(max-width: 860px) 100vw, 61vw" />
+              </picture>
             </div>
           </div>
         </div>
