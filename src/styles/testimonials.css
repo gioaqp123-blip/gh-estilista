@@ -1,44 +1,56 @@
-  /* ---------- TESTIMONIOS ---------- */
-  .testi{background:var(--cream);}
-  .testi-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:24px;
-  }
-  .testi-card{
-    background:var(--paper);
-    border:1px solid rgba(92,29,62,0.08);
-    border-radius:8px;
-    padding:36px 30px;
-    box-shadow:0 6px 20px rgba(92,29,62,0.05);
-    transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
-  }
-  .testi-card:hover{transform:translateY(-6px); box-shadow:0 26px 46px rgba(92,29,62,0.13); border-color:rgba(92,29,62,0.14); z-index:1;}
-  .testi-stars{
-    display:flex;
-    gap:4px;
-    color:var(--gold);
-    margin-bottom:14px;
-  }
-  .testi-stars svg{width:14px; height:14px;}
-  .testi-card .quote-mark{
-    font-family:'Fraunces', serif;
-    font-style:italic;
-    font-size:40px;
-    color:var(--gold);
-    line-height:1;
-  }
-  .testi-card p{
-    margin-top:12px;
-    font-size:14.5px;
-    line-height:1.65;
-    color:#4a3a40;
-  }
-  .testi-card .who{
-    margin-top:20px;
-    font-size:12.5px;
-    letter-spacing:0.04em;
-    color:var(--plum);
-    font-weight:500;
-  }
-
+/* ---------- TESTIMONIOS ---------- */
+.testi{background:var(--paper);}
+.testi-grid{
+  display:grid;
+  grid-template-columns:.82fr 1.36fr .82fr;
+  gap:0;
+  border-top:1px solid rgba(92,29,62,.18);
+  border-bottom:1px solid rgba(92,29,62,.18);
+}
+.testi-card{
+  position:relative;
+  min-height:260px;
+  padding:28px 30px 34px;
+  border-right:1px solid rgba(92,29,62,.18);
+  display:flex;
+  flex-direction:column;
+}
+.testi-card:last-child{border-right:0;}
+.testi-card-main{
+  min-height:330px;
+  padding:40px 46px 42px;
+  background:var(--cream);
+}
+.testi-count{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:.14em;
+}
+.quote-mark{
+  margin-top:22px;
+  font:italic 72px/.65 'Fraunces', serif;
+  color:var(--rose);
+}
+.testi-card p{
+  margin-top:16px;
+  color:#4a3a40;
+  font:500 18px/1.45 'Fraunces', serif;
+  text-wrap:pretty;
+}
+.testi-card:not(.testi-card-main) p{font-size:15px; line-height:1.58;}
+.testi-card .who{
+  margin-top:auto;
+  padding-top:28px;
+  color:var(--plum);
+  font-size:12.5px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+@media (max-width: 860px){
+  .testi-grid{grid-template-columns:1fr;}
+  .testi-card,
+  .testi-card-main{min-height:0; padding:28px 22px 30px; border-right:0; border-bottom:1px solid rgba(92,29,62,.18);}
+  .testi-card:last-child{border-bottom:0;}
+  .testi-card-main{order:-1;}
+  .testi-card .who{padding-top:24px;}
+}

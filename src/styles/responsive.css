@@ -1,21 +1,80 @@
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width: 860px){
-    header{backdrop-filter:none; background:var(--paper);}
-    .nav-links{position:fixed; inset:0 0 0 auto; width:78%; background:var(--paper); flex-direction:column; align-items:flex-start; padding:100px 32px; gap:24px; transform:translateX(100%); transition:transform .35s ease; overflow-y:auto; z-index:65;}
-    .nav-links.open{transform:translateX(0);}
-    nav ul{flex-direction:column; gap:20px;}
-    .burger{display:flex; flex-direction:column; gap:5px; z-index:70; background:none; border:none; cursor:pointer;}
-    .burger span{width:24px; height:1.5px; background:var(--plum);}
-    .hero .wrap{padding-top:120px; padding-bottom:40px;}
-    .hero-scroll{display:none;}
-    .about .wrap{grid-template-columns:1fr;}
-    .about-frame{aspect-ratio:16/10;}
-    .about-frame .about-photo-accent{width:34%; bottom:-18px; right:-14px; border-width:4px;}
-    .about-frame .tag{width:58%;}
-    .chart{grid-template-columns:1fr;}
-    .why-grid{grid-template-columns:1fr;}
-    .testi-grid{grid-template-columns:1fr;}
-    .contact .wrap{grid-template-columns:1fr;}
-    .contact-row .value{text-align:right; font-size:13px;}
-    .section{padding:80px 0;}
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 860px){
+  header{backdrop-filter:none; background:var(--paper);}
+  header .wrap{position:relative; z-index:70;}
+  .nav-links{
+    position:fixed;
+    inset:0 0 0 auto;
+    width:min(88%, 380px);
+    background:var(--paper);
+    flex-direction:column;
+    align-items:flex-start;
+    padding:112px 32px 40px;
+    gap:30px;
+    transform:translateX(100%);
+    visibility:hidden;
+    pointer-events:none;
+    transition:transform .35s ease, visibility .35s ease;
+    overflow-y:auto;
+    z-index:65;
+    box-shadow:-18px 0 46px rgba(61,19,41,.14);
   }
+  .nav-links.open{transform:translateX(0); visibility:visible; pointer-events:auto;}
+  .nav-links nav{width:100%;}
+  nav ul{flex-direction:column; gap:20px;}
+  nav a{font-size:15px;}
+  .nav-cta{margin-top:4px;}
+  .nav-scrim{
+    display:block;
+    position:fixed;
+    inset:0;
+    z-index:60;
+    border:0;
+    background:rgba(61,19,41,.35);
+    cursor:pointer;
+  }
+  .header-actions{position:relative; z-index:70;}
+  .burger{display:flex; flex-direction:column; gap:5px; z-index:70; background:none; border:none; cursor:pointer; padding:8px 0 8px 8px;}
+  .burger span{width:24px; height:1.5px; background:var(--plum); transition:transform .25s ease, opacity .25s ease;}
+  .hero .wrap{padding-top:120px; padding-bottom:48px;}
+  .hero-layout{grid-template-columns:1fr; gap:18px; min-height:0;}
+  .hero-copy{max-width:650px;}
+  .hero-scroll{display:none;}
+  .services-heading-row{grid-template-columns:1fr; gap:18px;}
+  .services-heading-row p{max-width:520px;}
+  .services-grid{grid-template-columns:1fr; gap:20px;}
+  .services-note-row{align-items:flex-start; flex-direction:column; gap:16px;}
+  .about .wrap{grid-template-columns:1fr; gap:58px;}
+  .about-frame{aspect-ratio:16/10;}
+  .about-frame .about-photo-accent{width:34%; bottom:-18px; right:-14px; border-width:4px;}
+  .about-frame .tag{width:58%;}
+  .contact .wrap{grid-template-columns:1fr;}
+  .contact-row .value{text-align:right; font-size:13px;}
+  .section{padding:80px 0;}
+}
+
+@media (max-width: 560px){
+  .wrap{padding-left:20px; padding-right:20px;}
+  .brand{font-size:19px; gap:8px;}
+  .brand img{width:38px; height:38px;}
+  .header-social{display:none;}
+  .nav-links{padding-left:24px; padding-right:24px;}
+  .hero .wrap{padding-top:104px;}
+  .hero h1{font-size:clamp(38px, 12vw, 56px);}
+  .hero p.lead{font-size:15px;}
+  .hero-ctas{flex-direction:column; align-items:stretch; gap:10px;}
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-ghost{justify-content:center; text-align:center;}
+  .section-head{margin-bottom:42px;}
+  .service-card-content{padding:20px 18px 18px;}
+  .service-card h3{font-size:21px;}
+  .service-card-preview{min-height:0;}
+  .booking-info, .booking-form{padding:28px 20px;}
+  .calendar{padding:10px;}
+  .cal-grid{gap:2px;}
+  .cal-day{font-size:14px;}
+  .slot-grid{grid-template-columns:repeat(3, 1fr);}
+  .contact-card{padding:28px 20px;}
+  .contact-row{align-items:flex-start; flex-direction:column; gap:5px;}
+  .contact-row .value{text-align:left;}
+}
