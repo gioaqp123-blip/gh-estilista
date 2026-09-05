@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "gh-estilista",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8791"],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "preview", "--", "--port", "8791", "--strictPort"],
       "port": 8791
     }
   ]
