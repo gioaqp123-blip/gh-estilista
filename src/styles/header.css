@@ -1,0 +1,79 @@
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    padding:22px 0;
+    background:rgba(251,246,242,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(92,29,62,0.08);
+    transition:padding .3s ease;
+  }
+  header.is-scrolled{padding:14px 0; background:rgba(253,246,245,0.94);}
+  header .wrap{display:flex; align-items:center; justify-content:space-between;}
+  .brand{
+    display:flex;
+    align-items:center;
+    flex-shrink:0;
+  }
+  .brand-logo{
+    display:block;
+    width:68px;
+    height:auto;
+    flex-shrink:0;
+  }
+  nav ul{list-style:none; display:flex; gap:30px;}
+  nav a{
+    font-size:13px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--plum);
+    position:relative;
+    padding-bottom:4px;
+  }
+  nav a::after{
+    content:'';
+    position:absolute; left:0; bottom:0;
+    width:0; height:1px;
+    background:var(--gold);
+    transition:width .25s ease;
+  }
+  nav a:hover::after{width:100%;}
+  nav a.active{color:var(--rose);}
+  nav a.active::after{width:100%; background:var(--rose);}
+  .nav-cta{
+    display:inline-block;
+    background:var(--plum);
+    color:var(--paper) !important;
+    padding:11px 22px;
+    border-radius:2px;
+    font-size:13px;
+    letter-spacing:0.04em;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+  }
+  .nav-cta:hover{background:var(--gold); color:var(--plum-deep) !important; transform:translateY(-2px); box-shadow:0 10px 20px rgba(201,161,90,0.3);}
+  .nav-links{display:flex; align-items:center; gap:36px;}
+  .nav-scrim{display:none;}
+  .header-actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-left:18px;
+  }
+  .header-social{
+    width:36px; height:36px;
+    border:1px solid rgba(92,29,62,0.18);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--plum);
+    flex-shrink:0;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .header-social:hover{border-color:var(--gold); color:var(--gold);}
+  .header-social svg{width:16px; height:16px;}
+  .header-social-fb{
+    font-family:Georgia, 'Times New Roman', serif;
+    font-weight:700;
+    font-style:italic;
+    font-size:17px;
+    line-height:1;
+  }
+  .burger{display:none;}

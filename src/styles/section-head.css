@@ -1,0 +1,21 @@
+  /* ---------- SECTION HEADS ---------- */
+  .section{padding:120px 0;}
+  .section-head{
+    max-width:560px;
+    margin-bottom:64px;
+  }
+  .section-head .eyebrow{color:var(--rose);}
+  .section-head h2{
+    font-size:clamp(32px, 4vw, 44px);
+    color:var(--plum);
+    line-height:1.12;
+    text-wrap:balance;
+  }
+  .section-head p{
+    margin-top:18px;
+    color:#5b4a51;
+    font-size:16px;
+    line-height:1.65;
+  }
+  .light-eyebrow::before{background:var(--rose);}
+

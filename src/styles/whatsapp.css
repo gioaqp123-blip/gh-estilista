@@ -1,0 +1,15 @@
+  /* ---------- WHATSAPP FAB ---------- */
+  .fab{
+    position:fixed;
+    bottom:26px; right:26px;
+    z-index:60;
+    background:var(--gold);
+    color:var(--plum-deep);
+    width:58px; height:58px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 26px rgba(92,29,62,0.28);
+    transition:transform .25s ease;
+  }
+  .fab:hover{transform:scale(1.07);}
+

@@ -1,0 +1,119 @@
+/* ---------- ABOUT / ESTILISTA ---------- */
+.about{background:var(--paper);}
+.about .wrap{
+  display:grid;
+  grid-template-columns:minmax(0, .9fr) minmax(0, 1.1fr);
+  gap:78px;
+  align-items:center;
+}
+.about-frame{
+  aspect-ratio:4/5;
+  background:
+    linear-gradient(160deg, rgba(201,161,90,.14), rgba(92,29,62,.06)),
+    var(--plum);
+  border:1px solid rgba(92,29,62,.14);
+  position:relative;
+  overflow:visible;
+}
+.about-frame::after{
+  content:'';
+  position:absolute;
+  inset:18px -18px -18px 18px;
+  border:1px solid rgba(92,29,62,.16);
+  pointer-events:none;
+}
+.about-photo-mask{position:absolute; inset:0; overflow:hidden; z-index:1;}
+.about-frame .about-photo{
+  display:block;
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s ease;
+}
+.about-frame:hover .about-photo{transform:scale(1.045);}
+.about-frame .about-photo-accent{
+  display:block;
+  position:absolute;
+  bottom:-28px;
+  right:-28px;
+  width:44%;
+  height:auto;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border:6px solid var(--paper);
+  box-shadow:0 18px 34px rgba(61,19,41,.22);
+  z-index:3;
+}
+.about-frame::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(0deg, rgba(61,19,41,.72) 0%, rgba(61,19,41,.05) 45%, rgba(61,19,41,0) 70%);
+  z-index:2;
+}
+.about-frame .tag{
+  position:absolute;
+  left:26px;
+  bottom:26px;
+  width:50%;
+  z-index:2;
+  color:var(--cream);
+  font-size:12px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  border-top:1px solid rgba(244,236,230,.3);
+  padding-top:14px;
+}
+.about-copy{position:relative;}
+.about-copy::before{
+  content:'02';
+  position:absolute;
+  top:-52px;
+  right:0;
+  color:rgba(92,29,62,.16);
+  font:italic 76px/1 'Fraunces', serif;
+}
+.about-copy .greeting{
+  font:italic 15px 'Fraunces', serif;
+  color:var(--rose);
+  margin-bottom:8px;
+}
+.about-copy h2{
+  font-size:clamp(30px,3.6vw,44px);
+  color:var(--plum);
+  line-height:1.12;
+  text-wrap:balance;
+  max-width:550px;
+}
+.about-copy p{
+  margin-top:20px;
+  font-size:16px;
+  line-height:1.7;
+  color:#5b4a51;
+  max-width:480px;
+}
+.about-stats{
+  margin-top:38px;
+  padding-top:20px;
+  border-top:1px solid rgba(92,29,62,.16);
+  display:flex;
+  gap:32px;
+  flex-wrap:wrap;
+}
+.about-stats div{min-width:100px;}
+.about-stats div strong,
+.about-stats div > span:first-child{
+  display:block;
+  font:500 30px/1 'Fraunces', serif;
+  color:var(--plum);
+}
+.about-stats div span:last-child{
+  display:block;
+  margin-top:8px;
+  font-size:11px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:#8a7178;
+}

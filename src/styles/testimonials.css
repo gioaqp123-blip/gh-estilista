@@ -1,0 +1,56 @@
+/* ---------- TESTIMONIOS ---------- */
+.testi{background:var(--paper);}
+.testi-grid{
+  display:grid;
+  grid-template-columns:.82fr 1.36fr .82fr;
+  gap:0;
+  border-top:1px solid rgba(92,29,62,.18);
+  border-bottom:1px solid rgba(92,29,62,.18);
+}
+.testi-card{
+  position:relative;
+  min-height:260px;
+  padding:28px 30px 34px;
+  border-right:1px solid rgba(92,29,62,.18);
+  display:flex;
+  flex-direction:column;
+}
+.testi-card:last-child{border-right:0;}
+.testi-card-main{
+  min-height:330px;
+  padding:40px 46px 42px;
+  background:var(--cream);
+}
+.testi-count{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:.14em;
+}
+.quote-mark{
+  margin-top:22px;
+  font:italic 72px/.65 'Fraunces', serif;
+  color:var(--rose);
+}
+.testi-card p{
+  margin-top:16px;
+  color:#4a3a40;
+  font:500 18px/1.45 'Fraunces', serif;
+  text-wrap:pretty;
+}
+.testi-card:not(.testi-card-main) p{font-size:15px; line-height:1.58;}
+.testi-card .who{
+  margin-top:auto;
+  padding-top:28px;
+  color:var(--plum);
+  font-size:12.5px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+@media (max-width: 860px){
+  .testi-grid{grid-template-columns:1fr;}
+  .testi-card,
+  .testi-card-main{min-height:0; padding:28px 22px 30px; border-right:0; border-bottom:1px solid rgba(92,29,62,.18);}
+  .testi-card:last-child{border-bottom:0;}
+  .testi-card-main{order:-1;}
+  .testi-card .who{padding-top:24px;}
+}
